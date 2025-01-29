@@ -1,0 +1,25 @@
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 0.1rem;
+
+  .input {
+    padding: 0.5rem;
+    background: white;
+
+    & input {
+      width: 100%;
+      border: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
