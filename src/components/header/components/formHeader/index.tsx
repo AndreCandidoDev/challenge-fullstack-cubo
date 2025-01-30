@@ -16,11 +16,20 @@ export const FormHeader: React.FC = () =>
   {
     dataForm.participation = Number(dataForm.participation)
 
+    if(dataForm.participation <= 0)
+    {
+      reactForm.setError("participation", { type: "custom", message: "Valor Deve ser maior que zero." })
+
+      return
+    }
+
     const newData = data
 
     newData.push(dataForm)
 
     setData([...newData])
+
+    reactForm.reset({firstName: "", lastName: "", participation: 0})
   }
 
   return (

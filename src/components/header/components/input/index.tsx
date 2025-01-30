@@ -19,7 +19,7 @@ export const Input = <T extends FieldValues>({ reactForm, type, name, label }: I
           type={type}
           placeholder={label}
           {...reactForm.register(name, {
-            required: "Campo Obrigatório"
+            required: "Campo Obrigatório",
           })}
         />
       </div>
